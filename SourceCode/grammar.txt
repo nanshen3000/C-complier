@@ -1,0 +1,58 @@
+------Productions-------
+0: S -> program $ 
+1: program -> var_declarations statements 
+2: program -> statements 
+3: var_declarations -> var_declarations var_declaration 
+4: var_declarations -> var_declaration 
+5: var_declaration -> INT declaration_list SEMI 
+6: declaration_list -> declaration_list COMMA declaration 
+7: declaration_list -> declaration 
+8: declaration -> ID ASSIGN INT_NUM 
+9: declaration -> ID LSQUARE INT_NUM RSQUARE 
+10: declaration -> ID 
+11: code_block -> statement 
+12: code_block -> LBRACE statements RBRACE 
+13: statements -> statements statement 
+14: statements -> statement 
+15: statement -> assign_statement SEMI 
+16: statement -> control_statement 
+17: statement -> read_write_statement SEMI 
+18: statement -> SEMI 
+19: control_statement -> if_statement 
+20: control_statement -> while_statement 
+21: control_statement -> do_while_statement SEMI 
+22: control_statement -> return_statement SEMI 
+23: read_write_statement -> read_statement 
+24: read_write_statement -> write_statement 
+25: assign_statement -> ID LSQUARE exp RSQUARE ASSIGN exp 
+26: assign_statement -> ID ASSIGN exp 
+27: if_statement -> if_stmt 
+28: if_statement -> if_stmt ELSE code_block 
+29: if_stmt -> IF LPAR exp RPAR code_block 
+30: while_statement -> WHILE LPAR exp RPAR code_block 
+31: do_while_statement -> DO code_block WHILE LPAR exp RPAR 
+32: return_statement -> RETURN 
+33: read_statement -> READ LPAR ID RPAR 
+34: write_statement -> WRITE LPAR exp RPAR 
+35: exp -> LPAR exp RPAR 
+36: exp -> INT_NUM 
+37: exp -> ID 
+38: exp -> ID LSQUARE exp RSQUARE 
+39: exp -> NOT_OP exp 
+40: exp -> MINUS exp 
+41: exp -> exp MUL_OP exp 
+42: exp -> exp DIV_OP exp 
+43: exp -> exp PLUS exp 
+44: exp -> exp MINUS exp 
+45: exp -> exp SHL_OP exp 
+46: exp -> exp SHR_OP exp 
+47: exp -> exp LT exp 
+48: exp -> exp GT exp 
+49: exp -> exp LTEQ exp 
+50: exp -> exp GTEQ exp 
+51: exp -> exp EQ exp 
+52: exp -> exp NOTEQ exp 
+53: exp -> exp AND_OP exp 
+54: exp -> exp OR_OP exp 
+55: exp -> exp ANDAND exp 
+56: exp -> exp OROR exp 
